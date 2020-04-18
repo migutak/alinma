@@ -1,0 +1,49 @@
+{
+  "name": "Services",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "oracle": {
+    "schema": "ECOL",
+    "table": "SERVICES"
+  },
+  "properties": {
+    "serviceId": {
+      "type": "String",
+      "id": true,
+      "required": true,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "oracle": {
+        "columnName": "SERVICE_ID",
+        "dataType": "VARCHAR2",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "serviceName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "oracle": {
+        "columnName": "SERVICE_NAME",
+        "dataType": "VARCHAR2",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

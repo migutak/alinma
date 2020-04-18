@@ -1,0 +1,1753 @@
+paths:
+  /Corporates:
+    post:
+      tags:
+        - Corporates
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Corporates.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    patch:
+      tags:
+        - Corporates
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Corporates.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    put:
+      tags:
+        - Corporates
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Corporates.replaceOrCreate__put_Corporates
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    get:
+      tags:
+        - Corporates
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Corporates.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Corporates/replaceOrCreate:
+    post:
+      tags:
+        - Corporates
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Corporates.replaceOrCreate__post_Corporates_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Corporates/upsertWithWhere:
+    post:
+      tags:
+        - Corporates
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Corporates.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/Corporates/{id}/exists':
+    get:
+      tags:
+        - Corporates
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Corporates.exists__get_Corporates_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/Corporates/{id}':
+    head:
+      tags:
+        - Corporates
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Corporates.exists__head_Corporates_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+        undefined:
+          description: Unknown error
+      deprecated: false
+    get:
+      tags:
+        - Corporates
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Corporates.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    put:
+      tags:
+        - Corporates
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Corporates.replaceById__put_Corporates_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    delete:
+      tags:
+        - Corporates
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Corporates.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+        undefined:
+          description: Unknown error
+      deprecated: false
+    patch:
+      tags:
+        - Corporates
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Corporates.prototype.patchAttributes
+      parameters:
+        - name: id
+          in: path
+          description: Corporates id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/Corporates/{id}/replace':
+    post:
+      tags:
+        - Corporates
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Corporates.replaceById__post_Corporates_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Corporates/findOne:
+    get:
+      tags:
+        - Corporates
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Corporates.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Corporates'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Corporates/update:
+    post:
+      tags:
+        - Corporates
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Corporates.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Corporates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Corporates/count:
+    get:
+      tags:
+        - Corporates
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Corporates.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateAccounts:
+    post:
+      tags:
+        - CorporateAccounts
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: CorporateAccounts.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    patch:
+      tags:
+        - CorporateAccounts
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: CorporateAccounts.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    put:
+      tags:
+        - CorporateAccounts
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: CorporateAccounts.replaceOrCreate__put_CorporateAccounts
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    get:
+      tags:
+        - CorporateAccounts
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: CorporateAccounts.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateAccounts/replaceOrCreate:
+    post:
+      tags:
+        - CorporateAccounts
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        CorporateAccounts.replaceOrCreate__post_CorporateAccounts_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateAccounts/upsertWithWhere:
+    post:
+      tags:
+        - CorporateAccounts
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: CorporateAccounts.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/CorporateAccounts/{id}/exists':
+    get:
+      tags:
+        - CorporateAccounts
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'CorporateAccounts.exists__get_CorporateAccounts_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/CorporateAccounts/{id}':
+    head:
+      tags:
+        - CorporateAccounts
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'CorporateAccounts.exists__head_CorporateAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+        undefined:
+          description: Unknown error
+      deprecated: false
+    get:
+      tags:
+        - CorporateAccounts
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: CorporateAccounts.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    put:
+      tags:
+        - CorporateAccounts
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'CorporateAccounts.replaceById__put_CorporateAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    delete:
+      tags:
+        - CorporateAccounts
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: CorporateAccounts.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+        undefined:
+          description: Unknown error
+      deprecated: false
+    patch:
+      tags:
+        - CorporateAccounts
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: CorporateAccounts.prototype.patchAttributes
+      parameters:
+        - name: id
+          in: path
+          description: CorporateAccounts id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/CorporateAccounts/{id}/replace':
+    post:
+      tags:
+        - CorporateAccounts
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'CorporateAccounts.replaceById__post_CorporateAccounts_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateAccounts/findOne:
+    get:
+      tags:
+        - CorporateAccounts
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: CorporateAccounts.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateAccounts'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateAccounts/update:
+    post:
+      tags:
+        - CorporateAccounts
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: CorporateAccounts.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/CorporateAccounts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateAccounts/count:
+    get:
+      tags:
+        - CorporateAccounts
+      summary: Count instances of the model matched by where from the data source.
+      operationId: CorporateAccounts.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateServices:
+    post:
+      tags:
+        - CorporateServices
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: CorporateServices.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    patch:
+      tags:
+        - CorporateServices
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: CorporateServices.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    put:
+      tags:
+        - CorporateServices
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: CorporateServices.replaceOrCreate__put_CorporateServices
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    get:
+      tags:
+        - CorporateServices
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: CorporateServices.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateServices/replaceOrCreate:
+    post:
+      tags:
+        - CorporateServices
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        CorporateServices.replaceOrCreate__post_CorporateServices_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateServices/upsertWithWhere:
+    post:
+      tags:
+        - CorporateServices
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: CorporateServices.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/CorporateServices/{id}/exists':
+    get:
+      tags:
+        - CorporateServices
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'CorporateServices.exists__get_CorporateServices_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/CorporateServices/{id}':
+    head:
+      tags:
+        - CorporateServices
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'CorporateServices.exists__head_CorporateServices_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+        undefined:
+          description: Unknown error
+      deprecated: false
+    get:
+      tags:
+        - CorporateServices
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: CorporateServices.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    put:
+      tags:
+        - CorporateServices
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'CorporateServices.replaceById__put_CorporateServices_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    delete:
+      tags:
+        - CorporateServices
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: CorporateServices.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+        undefined:
+          description: Unknown error
+      deprecated: false
+    patch:
+      tags:
+        - CorporateServices
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: CorporateServices.prototype.patchAttributes
+      parameters:
+        - name: id
+          in: path
+          description: CorporateServices id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/CorporateServices/{id}/replace':
+    post:
+      tags:
+        - CorporateServices
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'CorporateServices.replaceById__post_CorporateServices_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/CorporateServices'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateServices/update:
+    post:
+      tags:
+        - CorporateServices
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: CorporateServices.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/CorporateServices'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /CorporateServices/count:
+    get:
+      tags:
+        - CorporateServices
+      summary: Count instances of the model matched by where from the data source.
+      operationId: CorporateServices.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Services:
+    post:
+      tags:
+        - Services
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Services.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    patch:
+      tags:
+        - Services
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Services.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    put:
+      tags:
+        - Services
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Services.replaceOrCreate__put_Services
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    get:
+      tags:
+        - Services
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Services.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Services/replaceOrCreate:
+    post:
+      tags:
+        - Services
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Services.replaceOrCreate__post_Services_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Services/upsertWithWhere:
+    post:
+      tags:
+        - Services
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Services.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/Services/{id}/exists':
+    get:
+      tags:
+        - Services
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Services.exists__get_Services_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/Services/{id}':
+    head:
+      tags:
+        - Services
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Services.exists__head_Services_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+        undefined:
+          description: Unknown error
+      deprecated: false
+    get:
+      tags:
+        - Services
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Services.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    put:
+      tags:
+        - Services
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Services.replaceById__put_Services_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+    delete:
+      tags:
+        - Services
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Services.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+        undefined:
+          description: Unknown error
+      deprecated: false
+    patch:
+      tags:
+        - Services
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Services.prototype.patchAttributes
+      parameters:
+        - name: id
+          in: path
+          description: Services id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  '/Services/{id}/replace':
+    post:
+      tags:
+        - Services
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Services.replaceById__post_Services_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Services/findOne:
+    get:
+      tags:
+        - Services
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Services.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Services'
+        undefined:
+          description: Unknown error
+      deprecated: false
+  /Services/update:
+    post:
+      tags:
+        - Services
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Services.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Services'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Services/count:
+    get:
+      tags:
+        - Services
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Services.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+        '500':
+          description: internal serve error
+      deprecated: false
+definitions:
+  Corporates:
+    properties:
+      cifNumber:
+        maxLength: 100
+        type: string
+      corporateName:
+        maxLength: 100
+        type: string
+    required:
+      - cifNumber
+      - corporateName
+    additionalProperties: false
+  x-any:
+    properties: {}
+  CorporateAccounts:
+    properties:
+      id:
+        maxLength: 22
+        type: number
+        format: double
+      cifNumber:
+        maxLength: 100
+        type: string
+      accountNumber:
+        maxLength: 100
+        type: string
+    required:
+      - id
+      - cifNumber
+      - accountNumber
+    additionalProperties: false
+  CorporateServices:
+    properties:
+      id:
+        maxLength: 22
+        type: number
+        format: double
+      cifNumber:
+        maxLength: 100
+        type: string
+      accountNumber:
+        maxLength: 100
+        type: string
+      serviceId:
+        maxLength: 100
+        type: string
+    required:
+      - id
+      - cifNumber
+      - accountNumber
+      - serviceId
+    additionalProperties: false
+  Services:
+    properties:
+      serviceId:
+        maxLength: 100
+        type: string
+      serviceName:
+        maxLength: 100
+        type: string
+    required:
+      - serviceId
+      - serviceName
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: alinma
+  version: 1.0.0
+  title: alinma
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)

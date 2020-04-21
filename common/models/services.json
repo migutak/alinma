@@ -6,7 +6,7 @@
     "validateUpsert": true
   },
   "oracle": {
-    "schema": "ECOL",
+    "schema": "apicdev",
     "table": "SERVICES"
   },
   "properties": {
